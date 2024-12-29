@@ -3,3 +3,6 @@ dataset
 raw-img
 venv
 tuner_dir
+*.zip
+tuner_dir_phase2
+CI_Session7.ipynb
