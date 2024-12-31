@@ -7,3 +7,5 @@ tuner_dir
 tuner_dir_phase2
 CI_Session7.ipynb
 *.exe
+*.h5
+*.keras
