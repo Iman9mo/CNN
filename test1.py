@@ -6,12 +6,12 @@ from tensorflow.keras.layers import (
     BatchNormalization,
     Dropout,
     GlobalAveragePooling2D,
-    Dense,
+    Dense
 )
 from tensorflow.keras.optimizers import Adam
 
 def create_animal10_cnn_under_1_4M_params(
-    input_shape=(224, 224, 3),
+    input_shape=(128, 128, 3),
     num_classes=10,
     learning_rate=1e-3
 ):
@@ -47,7 +47,7 @@ def create_animal10_cnn_under_1_4M_params(
     model.add(GlobalAveragePooling2D())
 
     # Dense block
-    model.add(Dense(512, activation='relu'))
+    model.add(Dense(7000, activation='relu'))
     # model.add(BatchNormalization())
     # model.add(Dropout(0.5))
 
@@ -66,7 +66,7 @@ def create_animal10_cnn_under_1_4M_params(
 if __name__ == "__main__":
     # Example usage:
     model = create_animal10_cnn_under_1_4M_params(
-        input_shape=(224, 224, 3),
+        input_shape=(128, 128, 3),
         num_classes=10,
         learning_rate=1e-3
     )
